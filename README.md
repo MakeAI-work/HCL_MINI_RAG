@@ -120,5 +120,5 @@ uvicorn app.main:app --reload --port 8000
 
 ## 📜 License
 
-MIT © 2025 EY Project Team
+MIT © 2025 HCLHACKATHON Project Team
 
