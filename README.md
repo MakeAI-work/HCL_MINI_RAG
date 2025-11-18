@@ -98,7 +98,7 @@ uvicorn app.main:app --reload --port 8000
 
 ### 4. Dataset & Embeddings
 
-1. Download the dataset from Kaggle into `data/raw/`.
+1. Download the dataset from Kaggle: https://www.kaggle.com/datasets/nitishabharathi/indian-government-schemes
 2. Run `python scripts/embed_data.py` to generate embeddings and push to DeepLake.
 
 ---
