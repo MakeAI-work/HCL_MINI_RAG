@@ -48,10 +48,6 @@ A multimodal application where users can fill a simple form and instantly discov
 │
 ├─ .env.example                 # environment variables template
 └─ README.md                    # you are here
-```
-
-> **Note**
-> The current folder layout is flat; files will be progressively migrated into the structure above.
 
 ---
 
