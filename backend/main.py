@@ -6,6 +6,8 @@ from langchain_community.vectorstores import DeepLake
 from langchain.chains import RetrievalQA
 from langchain_community.chat_models import ChatOpenAI
 import os
+from dotenv import load_dotenv
+
 
 # ----------------------
 # Initialize application
@@ -34,6 +36,8 @@ class SchemeRequest(BaseModel):
 # ----------------------
 # Startup events – load embeddings & DB once
 # ----------------------
+load_dotenv()
+
 @app.on_event("startup")
 async def startup_event():
     # Expect OPENAI_API_KEY and ACTIVELOOP_TOKEN to be provided in environment (e.g., shell or .env)
