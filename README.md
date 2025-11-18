@@ -60,7 +60,7 @@ Built using a **React** front-end, **FastAPI** back-end, and a **DeepLake vector
 
 
 ![RAG Architecture](https://github.com/user-attachments/assets/3d6ca6df-cd39-422a-ac35-44c981d6dbac)
-<img width="724" height="424" alt="image" src="https://github.com/user-attachments/assets/1d3b26e6-a107-4ce4-9191-8c2d0bc8b283" />
+
 
 
 
