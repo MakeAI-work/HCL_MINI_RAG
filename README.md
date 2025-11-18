@@ -53,10 +53,6 @@ Built using a **React** front-end, **FastAPI** back-end, and a **DeepLake vector
 
 ![RAG Architecture](https://github.com/user-attachments/assets/3d6ca6df-cd39-422a-ac35-44c981d6dbac)
 
-1. **React** renders the SPA and communicates with FastAPI via JSON/REST or WebSockets.
-2. **FastAPI** exposes endpoints, performs data processing, and queries DeepLake for similarity search.
-3. **DeepLake** stores vector embeddings derived from Kaggle dataset rows / documents.
-
 ---
 
 ## 🚀 Local Setup
