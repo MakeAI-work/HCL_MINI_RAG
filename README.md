@@ -57,6 +57,9 @@ Built using a **React** front-end, **FastAPI** back-end, and a **DeepLake vector
 │    UI      │  ◀──────────────▶ │   FastAPI     │  ───────────────▶     │  DeepLake   │
 │  (React)   │                   │  Backend API  │                       │ Vector DB   │
 └────────────┘                   └───────────────┘                       └─────────────┘
+
+![WhatsApp Image 2025-11-18 at 14 51 16_5a1cea3e](https://github.com/user-attachments/assets/19f074f1-10ed-456d-ab12-c80cbe3229c9)
+
          
 ```
 
