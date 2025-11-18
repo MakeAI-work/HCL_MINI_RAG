@@ -14,40 +14,28 @@ Built using a **React** front-end, **FastAPI** back-end, and a **DeepLake vector
 
 ---
 
-## 📁 Repository Structure (recommended)
+## 📁 Current Repository Structure
 
 ```
-/                               # root of the repo
-├─ frontend/                    # React SPA
-│  ├─ src/
-│  │  ├─ components/
-│  │  ├─ pages/
-│  │  ├─ hooks/
-│  │  └─ main.tsx
-│  ├─ public/
-│  └─ package.json
+/                                # project root
+├─ backend/                      # FastAPI server
+│  ├─ main.py                    # application entry
+│  ├─ requirements.txt           # Python deps
+│  └─ .env                       # backend secrets (git-ignored)
 │
-├─ backend/                     # FastAPI server
-│  ├─ app/
-│  │  ├─ api/
-│  │  │  ├─ v1/
-│  │  │  │  └─ endpoints.py
-│  │  ├─ core/                  # settings, logging, security
-│  │  ├─ services/              # business logic – vector search, etc.
-│  │  ├─ models.py
-│  │  └─ main.py
-│  └─ pyproject.toml
+├─ frontend/                     # Vite + React SPA
+│  ├─ index.html                 # HTML template (Tailwind CDN)
+│  ├─ package.json               # JS deps & scripts
+│  ├─ vite.config.js             # Vite config + proxy
+│  └─ src/
+│      ├─ main.jsx               # React entry
+│      ├─ App.jsx                # root component
+│      └─ components/
+│          ├─ SchemeForm.jsx     # form to collect user data
+│          └─ SchemeResults.jsx  # displays recommendations
 │
-├─ data/                        # Raw & processed datasets (git-ignored)
-│  ├─ raw/                      # downloaded from Kaggle
-│  └─ processed/                # cleaned / embedded vectors
-│
-├─ docs/                        # architecture diagrams, ADRs
-│
-├─ scripts/                     # helper shell / python scripts
-│
-├─ .env.example                 # environment variables template
-└─ README.md                    # you are here
+├─ .env                          # global env vars (git-ignored)
+└─ README.md                     # documentation (this file)
 
 ---
 
@@ -73,27 +61,42 @@ Built using a **React** front-end, **FastAPI** back-end, and a **DeepLake vector
 
 ## 🚀 Local Setup
 
-### 1. Clone & prerequisites
+### 1. Prerequisites
 
 ```bash
-# Node ≥ 18, Python ≥ 3.11, Poetry & pnpm recommended.
+# Node ≥ 18
+# Python ≥ 3.10
 ```
 
-### 2. Frontend
-
-```bash
-cd frontend
-pnpm install   # or yarn / npm
-pnpm dev       # starts Vite dev server on http://localhost:5173
-```
-
-### 3. Backend
+### 2. Backend
 
 ```bash
 cd backend
-poetry install          # installs Python deps
-cp .env.example .env    # add your environment variables
-uvicorn app.main:app --reload --port 8000
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# Copy or create .env with the following vars
+# OPENAI_API_KEY=<your-openai-key>
+# ACTIVELOOP_TOKEN=<your-activeloop-token>
+
+python -m backend.main        # http://localhost:8000
+```
+
+### 3. Frontend
+
+```bash
+cd frontend
+npm install     # or yarn / pnpm
+npm run dev     # http://localhost:5173
+```
+
+### 4. (Optional) Regenerate Embeddings
+
+If you need to rebuild the DeepLake vector store:
+
+```bash
+python scripts/embed_data.py   # expects data in ./data/raw
 ```
 
 ### 4. Dataset & Embeddings
@@ -107,13 +110,9 @@ uvicorn app.main:app --reload --port 8000
 
 - **Frontend:** Netlify / Vercel static deploy.
 - **Backend:** Render / Fly.io Docker container.
-- **Environment:** Ensure `DEEP_LAKE_TOKEN` and dataset paths are configured.
-
----
+- **Environment:** Ensure `OPENAI_API_KEY` , `ACTIVELOOP_TOKEN` and dataset paths are configured.
 
 
 
-## 📜 License
 
-MIT © 2025 HCLHACKATHON Project Team
 
