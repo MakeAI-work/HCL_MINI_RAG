@@ -2,7 +2,6 @@
 
 A **multimodal AI application** where users fill a simple form and instantly receive **personalized central and state government scheme recommendations**.  
 Built using a **React** front-end, **FastAPI** back-end, and a **DeepLake vector database** powered by curated **Kaggle datasets**.
----
 
 ## 🛠️ Tech Stack
 
