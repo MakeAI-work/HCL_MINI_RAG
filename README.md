@@ -113,14 +113,7 @@ uvicorn app.main:app --reload --port 8000
 
 ---
 
-## 🤝 Contributing
 
-1. Fork & clone.
-2. Create a feature branch.
-3. Follow the commit message convention `<type>(scope): subject`.
-4. Submit PR.
-
----
 
 ## 📜 License
 
