@@ -1,7 +1,7 @@
 # Problem Statement
 
-A multimodal application where users can fill a simple form and instantly discover the best government schemes—both **central** and **state**—tailored to them. It is powered by a **React** front-end, **FastAPI** back-end, and **DeepLake** vector database built on top of datasets hosted on **Kaggle**.
-
+A **multimodal AI application** where users fill a simple form and instantly receive **personalized central and state government scheme recommendations**.  
+Built using a **React** front-end, **FastAPI** back-end, and a **DeepLake vector database** powered by curated **Kaggle datasets**.
 ---
 
 ## 🛠️ Tech Stack
