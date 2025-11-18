@@ -77,7 +77,7 @@ def load_all_scheme_docs(root_folder: str):
 # --------------------------------------------------
 # 5️⃣ CHUNK DOCUMENTS
 # --------------------------------------------------
-def chunk_docs(documents, chunk_size=800, overlap=30):
+def chunk_docs(documents, chunk_size=100, overlap=200):
     splitter = CharacterTextSplitter(
         chunk_size=chunk_size,
         chunk_overlap=overlap
@@ -131,3 +131,4 @@ def run_full_pipeline():
 
 if __name__ == "__main__":
     run_full_pipeline()
+
